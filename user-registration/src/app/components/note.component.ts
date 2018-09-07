@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NoteService } from '../services/note.service';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-note',
