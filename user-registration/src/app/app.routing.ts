@@ -1,15 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import{RouterModule} from '@angular/router'
+import{RouterModule,Routes} from '@angular/router'
+
 import { NoteComponent } from './components/note.component';
+import {ThankComponent} from './components/thank.component'
 const appRoutes = [
     {
-        path: 'add',
+        path: 'form',
         component: NoteComponent,
     },
     {
+        path: 'thank',
+        component: ThankComponent,
+    },
+    {
         path: '',
-        redirectTo: '/add',
+        redirectTo: '/form',
         pathMatch: 'full'
     },
     {

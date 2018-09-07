@@ -15,11 +15,13 @@ import { NoteService } from './services/note.service';
 import { HttpClientModule } from '@angular/common/http';
 //routing
 import { RoutingModule } from './app.routing';
+import { ThankComponent } from './components/thank.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NoteComponent
+    NoteComponent,
+    ThankComponent
   ],
 
   imports: [

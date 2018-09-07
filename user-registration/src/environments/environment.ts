@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  api_url: 'http://localhost:3000/'
+  api_url: 'http://localhost:3000/',
+  city_url: "https://api.openweathermap.org/data/2.5/weather?q=",
+  city_api_key: "476e23fe1116f4e69d2a3e68672604e1"
 };
 
 /*

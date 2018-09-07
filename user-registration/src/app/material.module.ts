@@ -5,12 +5,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms'
-
+import {MatRadioModule} from '@angular/material/radio';
+import { MatIconModule } from '@angular/material/icon';
+import {MatSliderModule} from '@angular/material/slider';
+//moment module for date-time
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import {MatListModule} from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 
 const MODULES = [
     MatToolbarModule,MatButtonModule,
     MatFormFieldModule,MatInputModule,
-    FormsModule
+    FormsModule,MatRadioModule,
+    MatIconModule,MatSliderModule,
+    MatDatepickerModule,MatMomentDateModule,
+    MatListModule,MatCardModule
 ]
 
 @NgModule({
