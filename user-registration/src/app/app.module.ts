@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{ FlexLayoutModule } from '@angular/flex-layout';
 //Create manually material.module.ts for declare module of API and others
 import { MaterialModule } from './material.module';
+import { NoteComponent } from './components/note.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NoteComponent
   ],
   imports: [
     BrowserModule,
