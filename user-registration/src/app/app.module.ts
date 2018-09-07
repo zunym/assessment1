@@ -5,25 +5,32 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Install flex-layout
 import{ FlexLayoutModule } from '@angular/flex-layout';
-//Create manually material.module.ts for declare module of API and others
+//material.module
 import { MaterialModule } from './material.module';
+//new components
 import { NoteComponent } from './components/note.component';
-
+//services
+import { NoteService } from './services/note.service';
+//http
 import { HttpClientModule } from '@angular/common/http';
+//routing
+import { RoutingModule } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
     NoteComponent
   ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    RoutingModule
   ],
-  providers: [],
+  providers: [NoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
