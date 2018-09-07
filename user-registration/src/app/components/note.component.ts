@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
 export class NoteComponent implements OnInit {
 
   constructor(private noteSvc: NoteService) { }
-
+  title = "User Registration Form";
   ngOnInit() {
   }
 
