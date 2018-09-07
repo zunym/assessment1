@@ -17,6 +17,7 @@
         </mat-error>
     </mat-form-field>
 
+    
     <mat-form-field>
         <input type="password" name="password" placeholder="Enter Your Passsword" ngModel matInput color="primary" minlength="2"
             maxlength="20" required password>
@@ -36,13 +37,17 @@
     </mat-radio-group>
 
     <mat-form-field>
-        <input name="birthYear" placeholder="Your Date Of Birth" #birthYear="ngModel" ngModel matInput [matDatepicker]="mydate" minYear=18
-            maxYear=85>
+        <input name="birthYear" placeholder="Your Date Of Birth" #btField="ngModel" ngModel matInput [matDatepicker]="mydate" min="9/7/2000"
+            max="9/7/1933" required birthYear>
         <mat-datepicker-toggle matSuffix [for]="mydate">
         </mat-datepicker-toggle>
         <mat-datepicker #mydate></mat-datepicker>
         <mat-hint>pick from calender</mat-hint>
-        <!-- <mat-errors [control]="birthYear"></mat-errors> -->
+        <mat-error *ngIf="btField.hasError('birthYear')">
+            Registrant must be at least 18 years old
+        </mat-error>
+        
+
     </mat-form-field>
 
     <mat-form-field>
