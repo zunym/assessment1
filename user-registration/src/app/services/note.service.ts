@@ -10,6 +10,6 @@ export class NoteService {
   constructor(private http: HttpClient) { }
 
   addNote(note){
-    return this.http.post(`${environment.api_url}thought`, note);
+    return this.http.post(`${environment.api_url}data`, note);
   }
 }

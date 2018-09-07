@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NoteService } from '../services/note.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-note',
@@ -13,4 +14,15 @@ export class NoteComponent implements OnInit {
   ngOnInit() {
   }
 
+  addMyThought(form: NgForm) {
+    console.log('form: ', form.value, 'name: ', form.value.name);
+
+    this.noteSvc
+      .addNote(form.value)
+      .subscribe((result) => {
+        console.log('form value: ', result);
+      });
+
+    form.resetForm();
+  }
 }
